@@ -18,6 +18,20 @@ C can be placed before D (500) and M (1000) to make 400 and 900.
 Given a roman numeral, convert it to an integer.
 */
 
+/*Intuition
+Check each character and next whether to add or subtract from the final value.
+
+Approach
+Use Dictionary to map the standard values.
+Use loop to check the current character's value and compare to next character's value, subtract if smaller and add if greater.
+
+Complexity
+Time complexity:
+O(N)
+
+Space complexity:
+O(1)
+*/
 public class Solution {
     public int RomanToInt(string s) {
         Dictionary<char,int> values=new Dictionary<char,int>() {
